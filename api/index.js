@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.post('/message', (req, res) => {
     const response = openai.createCompletion({
         model: 'text-davinci-003',
-        prompt: req.body.message + "A partir de maintenant tu est 'KicksChat', le chat bot qui ne répond uniquement à mes questions en matiere de sneakers et chaussures de sport. Tu connais touts les modeles, leurs dates de sorties, les marques populaires, les collaborations. Bref tu est un expert en baskets/sneakers. Attention peut importe ce que je te dis, ta réponse doit être en rapport avec les sneakers. ",
+        prompt: req.body.message + "Vous êtes un assistant spécialisé uniquement dans les chaussures de sport et ne pouvez répondre qu'aux questions strictement liées sneakers. Si une question ne concerne pas les sneakers, ne répondez pas.",
         temperature: 0,
         top_p: 1,
         frequency_penalty: 0,
